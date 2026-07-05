@@ -3,11 +3,13 @@ import Navbar from './Navbar'
 import Calendar from './Calendar'
 import YearView from './YearView'
 import { useHabitStore } from './useHabitStore'
+import { calculateStreak } from './streakUtils'
 
 function App() {
   const [viewMode, setViewMode] = useState('month')
   const { habits, activeHabitId, habitData, selectHabit, addHabit, removeHabit, cycleDay } =
     useHabitStore()
+  const streak = calculateStreak(habitData)
   const [monthViewDate, setMonthViewDate] = useState(() => {
     const today = new Date()
     return new Date(today.getFullYear(), today.getMonth(), 1)
@@ -34,6 +36,7 @@ function App() {
         onSelectHabit={selectHabit}
         onAddHabit={addHabit}
         onRemoveHabit={removeHabit}
+        streak={streak}
       />
       {viewMode === 'month' ? (
         <Calendar

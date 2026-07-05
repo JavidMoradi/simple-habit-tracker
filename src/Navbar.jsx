@@ -1,4 +1,5 @@
 import HabitSwitcher from './HabitSwitcher'
+import StreakBadge from './StreakBadge'
 import './Navbar.css'
 
 function Navbar({
@@ -10,6 +11,7 @@ function Navbar({
   onSelectHabit,
   onAddHabit,
   onRemoveHabit,
+  streak,
 }) {
   return (
     <header className="navbar">
@@ -22,6 +24,7 @@ function Navbar({
           onAddHabit={onAddHabit}
           onRemoveHabit={onRemoveHabit}
         />
+        <StreakBadge streak={streak} />
       </div>
 
       <div className="navbar-controls">
