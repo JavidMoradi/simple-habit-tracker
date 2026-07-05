@@ -1,0 +1,84 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 10px 24px;
+  border-bottom: 1px solid var(--border);
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-h);
+  white-space: nowrap;
+}
+
+.navbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.today-button {
+  border: 1px solid var(--border);
+  background: none;
+  padding: 7px 16px;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 14px;
+  color: var(--text-h);
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+
+  &:hover {
+    border-color: var(--accent-border);
+    color: var(--accent);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+.view-switch {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.view-switch-option {
+  border: none;
+  background: none;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 14px;
+  color: var(--text);
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+
+  &:hover {
+    color: var(--text-h);
+  }
+
+  &.active {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  &.active:hover {
+    color: #fff;
+  }
+}

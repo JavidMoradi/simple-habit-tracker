@@ -1,83 +1,24 @@
-.calendar {
+.calendar-shell {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  gap: 24px;
   flex-grow: 1;
+  width: 100%;
   padding: 32px 20px;
   box-sizing: border-box;
 }
 
+.calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 560px;
+  max-width: 100%;
+  flex-shrink: 1;
+}
+
 .calendar-title {
   margin: 0 0 24px;
-}
-
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 8px;
-  width: 100%;
-  max-width: 560px;
-}
-
-.weekday-label {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text);
-  text-align: center;
-  padding-bottom: 8px;
-}
-
-.day-cell {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 1;
-  background: none;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-
-  &.empty {
-    cursor: default;
-  }
-
-  &.today .day-circle {
-    box-shadow: 0 0 0 2px var(--accent);
-  }
-}
-
-.day-circle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  max-width: 48px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  border: 1px solid var(--border);
-  color: var(--text-h);
-  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
-}
-
-.day-cell:hover .day-circle {
-  border-color: var(--accent-border);
-}
-
-.day-circle.green {
-  background: #2e9e44;
-  border-color: #2e9e44;
-  color: #fff;
-}
-
-.day-circle.yellow {
-  background: #e0b400;
-  border-color: #e0b400;
-  color: #1a1a1a;
-}
-
-.day-circle.red {
-  background: #d64545;
-  border-color: #d64545;
-  color: #fff;
 }
